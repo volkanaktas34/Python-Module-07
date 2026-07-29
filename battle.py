@@ -6,9 +6,9 @@ def factory(factory: CreatureFactory) -> None:
     base = factory.create_base()
     evolved = factory.create_evolved()
 
-    print(base.decribe())
+    print(base.describe())
     print(base.attack())
-    print(evolved.decribe())
+    print(evolved.describe())
     print(evolved.attack())
 
 
@@ -17,21 +17,18 @@ def battle(factory1: CreatureFactory, factory2: CreatureFactory) -> None:
     creature1 = factory1.create_base()
     creature2 = factory2.create_base()
 
-    print(creature1.decribe())
+    print(creature1.describe())
     print("vs. ")
-    print(creature2.decribe())
+    print(creature2.describe())
     print("fight!")
     print(creature1.attack())
     print(creature2.attack())
 
 
 def main() -> None:
-    flame = FlameFactory()
-    aqua = AquaFactory()
-
-    factory(flame)
-    factory(aqua)
-    battle(flame, aqua)
+    factory(FlameFactory())
+    factory(AquaFactory())
+    battle(FlameFactory(), AquaFactory())
 
 
 if __name__ == "__main__":

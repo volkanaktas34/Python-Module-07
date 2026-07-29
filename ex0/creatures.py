@@ -10,7 +10,7 @@ class Creature(ABC):
     def attack(self) -> str:
         raise NotImplementedError
 
-    def decribe(self) -> str:
+    def describe(self) -> str:
         return f"{self.name} is a {self.type} type Creature"
 
 
