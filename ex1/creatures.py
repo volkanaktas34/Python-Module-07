@@ -27,7 +27,7 @@ class Bloomelle(Creature, HealCapability):
 class Shiftling(Creature, TransformCapability):
     def __init__(self) -> None:
         super().__init__("Shiftling", "Normal")
-        self._transformed = False
+        TransformCapability.__init__(self)
 
     def transform(self) -> str:
         self._transformed = True
@@ -46,7 +46,7 @@ class Shiftling(Creature, TransformCapability):
 class Morphagon(Creature, TransformCapability):
     def __init__(self) -> None:
         super().__init__("Morphagon", "Normal/Dragon")
-        self._transformed = False
+        TransformCapability.__init__(self)
 
     def transform(self) -> str:
         self._transformed = True
