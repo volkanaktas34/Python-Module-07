@@ -30,16 +30,16 @@ class Shiftling(Creature, TransformCapability):
         TransformCapability.__init__(self)
 
     def transform(self) -> str:
-        self._transformed = True
+        self.is_transformed = True
         return "Shiftling shifts into a sharper form!"
 
     def attack(self) -> str:
-        if self._transformed:
+        if self.is_transformed:
             return "Shiftling performs a boosted strike!"
         return "Shiftling attacks normally."
 
     def revert(self) -> str:
-        self._transformed = False
+        self.is_transformed = False
         return "Shiftling returns to normal."
 
 
@@ -49,14 +49,14 @@ class Morphagon(Creature, TransformCapability):
         TransformCapability.__init__(self)
 
     def transform(self) -> str:
-        self._transformed = True
+        self._s_transformed = True
         return "Morphagon morphs into a dragonic battle form!"
 
     def attack(self) -> str:
-        if self._transformed:
+        if self.is_transformed:
             return "Morphagon unleashes a devastating morph strike!"
         return "Morphagon attacks normally."
 
     def revert(self) -> str:
-        self._transformed = False
+        self.is_transformed = False
         return "Morphagon stabilizes its form."
