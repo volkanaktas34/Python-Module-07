@@ -49,7 +49,7 @@ class Morphagon(Creature, TransformCapability):
         TransformCapability.__init__(self)
 
     def transform(self) -> str:
-        self._s_transformed = True
+        self.is_transformed = True
         return "Morphagon morphs into a dragonic battle form!"
 
     def attack(self) -> str:

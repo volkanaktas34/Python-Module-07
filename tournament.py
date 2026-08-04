@@ -23,10 +23,8 @@ def battle(opponents: list[tuple[CreatureFactory, BattleStrategy]]) -> None:
             print("now fight!")
 
             try:
-                actions1 = strategy1.act(first)
-                print(actions1)
-                actions2 = strategy2.act(second)
-                print(actions2)
+                print(strategy1.act(first))
+                print(strategy2.act(second))
             except InvalidStrategyError as error:
                 print("Battle error, aborting tournament:", error)
                 return

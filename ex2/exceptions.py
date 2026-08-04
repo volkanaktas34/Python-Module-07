@@ -1,4 +1,4 @@
-from ex0 import Creature
+from ex0.creatures import Creature
 
 
 class InvalidStrategyError(Exception):

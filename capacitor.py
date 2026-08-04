@@ -1,9 +1,8 @@
 from ex1 import HealingCreatureFactory, TransformCreatureFactory
 
 
-def healing() -> None:
+def healing(factory: HealingCreatureFactory) -> None:
     print("Testing Creature with healing capability")
-    factory = HealingCreatureFactory()
 
     base = factory.create_base()
     print("base:")
@@ -12,15 +11,14 @@ def healing() -> None:
     print(base.heal())
 
     evolved = factory.create_evolved()
-    print("evolved")
+    print("evolved:")
     print(evolved.describe())
     print(evolved.attack())
     print(evolved.heal())
 
 
-def transform() -> None:
+def transform(factory: TransformCreatureFactory) -> None:
     print("Testing Creature with transform capability")
-    factory = TransformCreatureFactory()
 
     base = factory.create_base()
     print("base:")
@@ -40,8 +38,8 @@ def transform() -> None:
 
 
 def main() -> None:
-    healing()
-    transform()
+    healing(HealingCreatureFactory())
+    transform(TransformCreatureFactory())
 
 
 if __name__ == "__main__":
